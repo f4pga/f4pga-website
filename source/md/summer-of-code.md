@@ -218,7 +218,7 @@ Some good pages to look for tips about writing good questions can be found below
  * [How To Ask Questions The Smart Way - Eric Steven Raymond](http://www.catb.org/esr/faqs/smart-questions.html)
  * [How To: Ask Questions The Smart Way - C++ Articles](http://www.cplusplus.com/articles/jLzyhbRD/)
 
-Often the best way to ask questions is to start writing your Google Summer of Code proposal as documented in the [Writing Proposals](#writing-proposals) section and finding out what areas you are getting stuck at.
+Often the best way to ask questions is to start writing your Google Summer of Code proposal as documented in the [Writing Proposals](#step-2---writing-a-proposal) section and finding out what areas you are getting stuck at.
 
 
 ---
@@ -257,7 +257,7 @@ accepted - even if poorer applications exist for higher priority projects.
 ## What should I do next?
 
 Start writing your proposal as laid out in the [Writing
-Proposals](#step-2-writing-proposals) section. This will help you ask better
+Proposals](#step-2---writing-a-proposal) section. This will help you ask better
 questions, too!
 
 ## Whom should I contact for project XXXX?

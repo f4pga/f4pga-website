@@ -24,7 +24,7 @@ function browserSync(done) {
 }
 
 function md() {
-  return gulp.src('./source/md/**/*.md')
+  return gulp.src('./md/**/*.md')
     .pipe(markdown())
     .pipe(inject.prepend(`
       <!DOCTYPE html>
@@ -51,7 +51,7 @@ function md() {
 
 function images() {
   return gulp
-    .src('./source/assets/img/**/*')
+    .src('./assets/img/**/*')
     .pipe(newer('./build/assets/img'))
     .pipe(
       imagemin([
@@ -77,7 +77,7 @@ function images() {
 
 function imagesMove() {
   return gulp
-    .src('./source/assets/img/**/*')
+    .src('./assets/img/**/*')
     .pipe(newer('./build/assets/img'))
     .pipe(gulp.dest('./build/assets/img'))
     .pipe(browsersync.stream())
@@ -85,7 +85,7 @@ function imagesMove() {
 
 function scss() {
   return gulp
-    .src('./source/assets/scss/*.scss')
+    .src('./assets/scss/*.scss')
     .pipe(sass({
       outputStyle: 'compressed'
     }))
@@ -96,13 +96,13 @@ function scss() {
 
 function css() {
   return gulp
-    .src('./source/assets/css/*.css')
+    .src('./assets/css/*.css')
     .pipe(gulp.dest('./build/assets/css/'))
 }
 
 function scripts() {
   return gulp
-    .src('./source/assets/js/**/*.js')
+    .src('./assets/js/**/*.js')
     .pipe(babel({
       presets: ['@babel/env']
     }))
@@ -112,11 +112,11 @@ function scripts() {
 }
 
 function handlebars() {
-  delete require.cache[require.resolve('./source/assets/data/data.json')]
+  delete require.cache[require.resolve('./assets/data/data.json')]
   return gulp
-    .src('./source/*.hbs')
+    .src('./*.hbs')
     .pipe(hb('html', {
-      context: require('./source/assets/data/data.json')
+      context: require('./assets/data/data.json')
     }))
     .pipe(rename(path => path.extname = '.html'))
     .pipe(gulp.dest('./build'))
@@ -124,24 +124,24 @@ function handlebars() {
 }
 
 function watchFiles() {
-  gulp.watch('./source/assets/fonts/**/*', fonts)
-  gulp.watch('./source/assets/scss/**/*', scss)
-  gulp.watch('./source/assets/css/**/*', css)
-  gulp.watch('./source/assets/js/**/*', scripts)
-  gulp.watch(['./source/*.hbs', './source/assets/data/data.json'], handlebars)
-  gulp.watch('./source/assets/img/**/*', images)
-  gulp.watch('./source/md/**/*.md', md)
+  gulp.watch('./assets/fonts/**/*', fonts)
+  gulp.watch('./assets/scss/**/*', scss)
+  gulp.watch('./assets/css/**/*', css)
+  gulp.watch('./assets/js/**/*', scripts)
+  gulp.watch(['./*.hbs', './assets/data/data.json'], handlebars)
+  gulp.watch('./assets/img/**/*', images)
+  gulp.watch('./md/**/*.md', md)
 }
 
 function fonts() {
   return gulp
-    .src('./source/assets/fonts/**/*')
+    .src('./assets/fonts/**/*')
     .pipe(gulp.dest('./build/assets/fonts'))
 }
 
 const build = gulp.parallel(scss, css, scripts, images, fonts, handlebars, md, () => {
   return gulp
-    .src('./source/**/*.html')
+    .src('./**/*.html')
     .pipe(gulp.dest('./build'))
 }),
   watch = gulp.series(gulp.parallel(scss, css, scripts, imagesMove, fonts, handlebars), gulp.parallel(watchFiles, browserSync))

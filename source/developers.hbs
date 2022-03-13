@@ -41,53 +41,6 @@
     </div>
   </nav>
 
-  <section class="row tools" id="tools">
-    <h2 class="row__header tools__header">
-      <span class="underline">About F4PGA</span>
-    </h2>
-    <div class="tools__content">
-      <p class="tools__paragraph">
-        The F4PGA toolchain consists of logic synthesis and implementation
-        tools, as well as chip documentation projects for chips of various
-        vendors. To prepare a working bitstream for a particular FPGA chip,
-        the toolchain goes through the following stages.
-      </p>
-      <p class="tools__paragraph">
-        First, a description of the FPGA chip is created with the information
-        from the relevant bitstream documentation project.
-        This part is done within the
-        <a href="https://github.com/chipsalliance/f4pga-arch-defs" class="tools__link">
-        F4PGA Architecture Definitions</a>. The project prepares
-        information about the timings and resources available in the chip
-        needed at the implementation stage, as well as techmaps for
-        the synthesis tools.
-      </p>
-      <p class="tools__paragraph">
-        The second step is logic synthesis. It is carried out in the
-        <a href="https://github.com/YosysHQ/yosys" class="tools__link">Yosys</a>
-        framework, which expresses the input Verilog file by means of the block
-        and connection types available in the chosen chip.
-      </p>
-      <p class="tools__paragraph">
-        The next step is implementation. Placement and routing tools put
-        individual blocks from the synthesis description in the specific chip
-        locations and create paths between them. To do that, F4PGA uses
-        either <a href="https://github.com/YosysHQ/nextpnr" class="tools__link">
-        nextpnr</a> or <a href="https://github.com/verilog-to-routing/vtr-verilog-to-routing"
-        class="tools__link">Verilog to Routing</a>.
-      </p>
-      <p class="tools__paragraph">
-        Finally, the design properties are translated into a set of features
-        available in the given FPGA chip. These features are saved in the
-        <a href="https://github.com/chipsalliance/fasm" class="tools__link">fasm
-        format</a>, which is developed as part of F4PGA. The fasm file is
-        then translated to bitstream using the information from the
-        bitstream documentation projects.
-      </p>
-      </div>
-    </div>
-  </section>
-
   <footer class="footer">
     <div class="footer__wrapper">
         <span class="footer__copy">

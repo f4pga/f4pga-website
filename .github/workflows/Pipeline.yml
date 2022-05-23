@@ -1,47 +1,61 @@
-name: build-and-deploy
+name: Pipeline
 
 on:
   push:
-    branches: [ main ]
   pull_request:
-    branches: [ main ]
+  schedule:
+    - cron: '0 0 * * 5'
+  workflow_dispatch:
 
 jobs:
-  build:
+
+
+  Build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
         with:
-          node-version: '10'
-      - name: Clone and Build
+          node-version: '14'
+          cache: 'npm'
+
+      - name: Install dependencies
         run: |
-          npm install
+          npm ci
           npm install -g gulp-cli
-          gulp build
-      - uses: actions/upload-artifact@v2
+
+      - name: Build
+        run: gulp build
+
+      - uses: actions/upload-artifact@v3
         with:
           name: website-build
-          path: |
-              build
-  deploy:
+          path: build
+
+
+  Deploy:
     runs-on: ubuntu-latest
-    needs: [ build ]
+    needs: Build
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     steps:
-      - uses: actions/download-artifact@v2
+
+      - uses: actions/download-artifact@v3
         with:
           name: website-build
           path: /tmp/website-build
-      - uses: actions/checkout@v2
+
+      - uses: actions/checkout@v3
+
       - name: Deploy website
-        if: github.event_name == 'push'
         run: |
-          export ROOT=$(pwd)
+          ROOT_CONFIG=$(pwd)/.git/config
           cd /tmp/website-build/
           touch .nojekyll
           echo 'f4pga.org' > CNAME
           git init
-          cp $ROOT/.git/config ./.git/config
+          cp "$ROOT_CONFIG" ./.git/config
           git add .
           git config --local user.email "push@gha"
           git config --local user.name "GHA"

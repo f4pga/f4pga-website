@@ -4,17 +4,9 @@ Sources of the website for the [F4PGA](https://github.com/chipsalliance/f4pga) p
 
 # Development
 
-## Dependencies
-
-Requires `node.js`. Run `npm install` to install dependencies.
-
-## Live reload
-
-Use `gulp`. Run `gulp watch` to start a live server.
-
-## Build
-
-Run `gulp build` to build into the `build` folder. Static files can be served from there.
+* Requires `node.js`. Run `npm install` to install dependencies.
+* Run `gulp watch` to start a live server.
+* Run `gulp build` to build into the `build` folder. Static files can be served from there.
 
 # License
 

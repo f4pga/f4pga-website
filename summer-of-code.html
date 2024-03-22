@@ -1,0 +1,217 @@
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>F4PGA</title>
+        <link rel="stylesheet" href="assets/css/main.css">
+      </head>
+
+      <body class="article">
+    <h1 id="chips-alliance-f4pga-project-gsoc-2022-contribution-guidelines">CHIPS Alliance F4PGA project GSoC 2022 contribution guidelines</h1>
+<h1 id="step-0-prior-reading">Step 0 - Prior Reading</h1>
+<p>Firstly, <strong>please read the Google Summer of Code
+<a href="https://google.github.io/gsocguides/student/">Contributor Manual</a></strong>. It contains a
+lot of helpful information about the program and about participating as a
+contributor in Google Summer of Code.</p>
+<p>Secondly, <strong>please read the Google Summer of Code
+<a href="https://developers.google.com/open-source/gsoc/faq">FAQ</a></strong>.
+It contains lots of helpful information about the program, specific deadlines
+and how things will run.</p>
+<h1 id="step-1-finding-an-idea">Step 1 - Finding an <strong>Idea</strong></h1>
+<p>Due to the F4PGA project being made up of
+<a href="https://f4pga.org/#subprojects">many smaller projects</a> (and as our list of supported platforms grows, that&#39;s not even the full list), it can be tricky to work out which projects match your skills. We have a number
+of useful tools to help match you with projects.</p>
+<p>As selecting a project or understanding an idea can be hard, we recommend you
+come join us <a href="https://kiwiirc.com/nextclient/#irc://irc.libera.chat/#F4PGA">on IRC</a> and talk to us further about them. Good contributors engage with the community
+even before GSoC starts!</p>
+<h2 id="idea-issue-tracker"><strong>Idea</strong> Issue Tracker</h2>
+<p>The F4PGA project has a
+<a href="https://github.com/f4pga/ideas">dedicated issue tracker</a>
+that lists tasks that are suitable to be completed as part of GSoC.</p>
+<h2 id="can-i-work-on-xxx-">Can I work on XXX?</h2>
+<p>If an idea is listed in our <a href="https://github.com/f4pga/ideas/issues">Idea issue tracker</a>, it&#39;s probably
+a good one!</p>
+<h2 id="what-should-i-work-on-">What should I work on?</h2>
+<p>What do you like doing? What interests you? You know better what projects are
+going to keep you interested for 3 months than we do.</p>
+<h2 id="is-project-xxx-important-">Is project XXX important?</h2>
+<p><strong>For GSoC the most important factor is the application&#39;s quality!</strong> If the
+strongest application submitted is for a lower priority project, it is much more likely to
+be accepted - even if poorer applications exist for higher priority projects.</p>
+<h1 id="step-2-writing-a-proposal">Step 2 - Writing A <strong>Proposal</strong></h1>
+<p><strong>Feel free to submit multiple proposals.</strong></p>
+<p>The following links detail general ways to write a successful Summer of Code Proposal:</p>
+<ul>
+<li><a href="http://wiki.inkscape.org/wiki/index.php/SOC_Writing_Project_Proposals">HOWTO Write Project Proposals</a></li>
+<li><a href="http://wiki.inkscape.org/wiki/index.php/SOC_Accepted_Proposals">Inkscape&#39;s Accepted Proposals</a></li>
+<li><a href="https://opensource.com/article/21/10/google-summer-code">RedHat&#39;s experience</a></li>
+</ul>
+<h2 id="tips">Tips</h2>
+<p>Having reviewed many proposals in the past years, there are a couple of things that many of them seem to
+be lacking. This list of tips should help you avoid common mistakes and make
+your proposals better.</p>
+<h3 id="tip-1-include-irc-nickname"><strong>Tip 1</strong> - Include IRC Nickname</h3>
+<p>Include your IRC nick as the first thing in the detailed description.</p>
+<p>During Summer of Code hundreds of new people turn up, keeping records straight
+can become a bit of a challenge. Especially when your IRC nick, email address and real name have
+no resemblance.</p>
+<h3 id="tip-2-project-first-resume-second"><strong>Tip 2</strong> - <strong>Project First</strong>, Resume Second</h3>
+<p>We are most interested in your proposal for the project. If your proposal looks
+good, we may then want to look at your resume / personal description.</p>
+<p>Hence, include the project information first and your personal stuff second.</p>
+<h3 id="tip-3-include-assertive-functional-milestones"><strong>Tip 3</strong> - Include assertive Functional Milestones</h3>
+<p>One of the best ways to show that you are a serious contributor is to include
+proper assertive milestones. These should be single sentences which say
+something like:</p>
+<ul>
+<li>The AI will issue move orders.</li>
+<li>The client will be able to display planets in a 3d fashion.</li>
+<li>The ruleset will allow tpclient-pywx to see planets.</li>
+<li>The metaserver will display a starmap generated from starmapper.</li>
+</ul>
+<p><strong>The keyword here is will, it is assertive.</strong></p>
+<p>These milestones should have dates associated with them. We understand that you
+are new to the project and that these dates will change as the project
+progresses. You <em>will not</em> fail just because a milestone had to be moved a week
+or dropped altogether.</p>
+<p>The milestones should be testable and specific. Here are some examples which
+are not acceptable.</p>
+<ul>
+<li>The AI framework will be finished.</li>
+<li>The star map will work.</li>
+<li>The ruleset will be balanced.</li>
+</ul>
+<p>Negative milestones are hard to test, avoid them if possible. For example &quot;The
+AI will not issue wrong orders&quot; is almost impossible to prove and not all that
+useful. More often negative statements are goals not milestones.</p>
+<p>These milestones will be hard to figure out, being able to talk about specifics
+shows that you have done your research and know your stuff. Have confidence in your
+own abilities!</p>
+<p>Keep your milestones small, they should be doable in less than a week&#39;s full
+time work. The smaller (and more specific) they are, the harder it will be to
+get behind on.</p>
+<p>Talk to the mentors about your milestones, they have a huge amount of knowledge
+about what is realistic and will be happy to help you refine the details.</p>
+<h3 id="tip-4-we-are-not-mind-readers"><strong>Tip 4</strong> - We are not mind readers</h3>
+<p><strong>Anything which is not linked to from your proposal effectively does not
+exist.</strong> I&#39;m afraid we cannot (yet) read your mind.</p>
+<p>It is unlikely that we will remember that IRC conversation we had about XYZ.
+Other mentors may not have seen that conversation either.</p>
+<p>If you have thought about a certain way to do something, tell us - even if you
+decided that it was not feasible. If you had an important IRC conversation
+which resulted in changing the way you think, link to the logs. If a web page 
+you&#39;ve been reading proved influential, share with us!</p>
+<h3 id="tip-5-submit-now-"><strong>Tip 5</strong> - Submit now!</h3>
+<p>Do not submit last minute as you won&#39;t have time to update your
+proposal based on feedback. There is still plenty of time for mentors to give
+feedback and for you to update your proposal. Plan ahead!</p>
+<h3 id="tip-6-make-your-application-public"><strong>Tip 6</strong> - Make your application public</h3>
+<p>Having a public application means not only can mentors give you feedback but
+other contributors and the general community can, too!</p>
+<p>Using a wiki is a good idea because it lets us look at the history of how your
+proposal has evolved. It also means you can have formatting, making it easier to
+read.</p>
+<h3 id="tip-7-splitting-applications-which-are-too-long"><strong>Tip 7</strong> - Splitting applications which are too long</h3>
+<p>Google limits the text length you can submit for your detailed description.
+This can be quite limiting if you have some detailed information or pseudo code.
+Hence, it is recommended that you produce two versions of your application.</p>
+<p>A &quot;cut back&quot; version which fits into the character limit. This should be all
+the very important bits of your application. You must include your functional
+milestones in this section. There should be enough &#39;meat&#39; in this section to
+convince us to look at your further URL.</p>
+<p>The URL in the document should link to your full proposal. Feel free to add
+things like pseudo code, design information or anything else which you feel is
+relevant.</p>
+<p>The extended proposal to which you will be linking should also be included in your complete 
+Google application. Duplicated text should be clearly marked in a different
+color, ensure it remains readable. We will not be able to jump between documents back and forth, 
+so make sure the extended proposal is self-contained.
+<strong>Remember, quality is better than quantity!</strong></p>
+<hr>
+
+<h2 id="selection-criteria">Selection Criteria</h2>
+<p>The following might give you an indication of some of the things we are looking for.</p>
+<p>There is always a subjective element to judging applications, but we believe that
+by trying to quantify the decision process, we&#39;re making it easier for people to understand why
+their application was or was not accepted.</p>
+<ul>
+<li><strong>Proposal is longer than a few sentences.</strong> - We need some &#39;meat&#39; in the proposal in order to even consider it.</li>
+<li><strong>Proposer has contacted us prior to the submission.</strong> - This demonstrates a definite interest in F4PGA and proves your ability to communicate with us.</li>
+<li><strong>Proposer knows the appropriate programming language(s).</strong></li>
+<li><strong>Proposer shows evidence of being able to create software.</strong> - Our goal is to help programmers become good at Open Source, not to teach non-programmers how to program. However, we are willing to help people develop their programming skills.</li>
+<li><strong>Proposal is well written.</strong> - While we don&#39;t expect perfect English, we do expect that the proposer took time to spell check, proofread it, organize it logically, and use comprehensible grammar.</li>
+<li><strong>Proposal demonstrates understanding of the subject matter.</strong> - We expect the proposer to do some research, ask questions, and gain some understanding of the project they&#39;re proposing. This gives us confidence that they&#39;ll be able to complete the project successfully.</li>
+<li><strong>Proposal shows creativity.</strong> We like to see someone thinking outside the box, including proposing ideas for projects we hadn&#39;t listed.</li>
+<li><strong>Proposal is the only submission for the given task.</strong> - Many proposals focus on the same few tasks, so if you&#39;re the only person proposing to do a given project, that weighs in your favor.</li>
+<li><strong>Proposal shows implementation planning.</strong> - If the author has broken the work out into a task list, it shows that they know what they&#39;ll be doing.</li>
+<li><strong>Proposal scope is realistic.</strong> - 12 weeks will go by fast. Proposals that promise too much are unlikely to be completed in a timely fashion.</li>
+<li><strong>Proposal shows motivation.</strong> - While it&#39;s important to describe the project in detail and show us that you have the necessary skills, do not forget to communicate your motivation, i.e. why you want to work with us on this particular project.</li>
+</ul>
+<p>The following are conditions that automatically result in rejection:</p>
+<ul>
+<li>Group project proposed. Google has specified that groups MAY NOT participate. Individuals only.</li>
+<li>Proposer must be at least 18 years old at time of registration.</li>
+<li>Proposer must be eligible to work in their country of residence during the duration of the program.</li>
+<li>Proposer must be a resident of a country not currently embargoed by the United States.</li>
+</ul>
+<h1 id="step-4-fixing-your-first-bug">Step 4 - Fixing your first bug</h1>
+<p>While not required, it is <strong>highly recommended</strong> that GSoC contributors try and fix
+at least one small bug before the mentors finish reviewing applications.</p>
+<p>Most F4PGA projects have a number of small tasks marked with the &#39;good first issue label&#39;. These problems/improvements are generally smaller and designed to be easy to get started with.</p>
+<p>Submitting an enhancement or bug fix shows that you have understood the project enough to get things set up.</p>
+<h1 id="how-to-ask-for-help">How to ask for help</h1>
+<p>Google Summer of Code will require you to work independently and hence showing
+independent investigation and troubleshooting skills <strong>is a must</strong>. We
+definitely encourage asking questions of the mentors, but you must demonstrate
+having researched the question.</p>
+<p>Some good pages to look for tips about writing good questions can be found below:</p>
+<ul>
+<li><a href="http://www.catb.org/esr/faqs/smart-questions.html">How To Ask Questions The Smart Way - Eric Steven Raymond</a></li>
+<li><a href="http://www.cplusplus.com/articles/jLzyhbRD/">How To: Ask Questions The Smart Way - C++ Articles</a></li>
+</ul>
+<p>Often the best way to ask questions is to start writing your Google Summer of Code proposal as documented in the <a href="#step-2---writing-a-proposal">Writing Proposals</a> section and finding out what areas you are getting stuck at.</p>
+<hr>
+<h1 id="where-to-ask-questions">Where to Ask Questions</h1>
+<ul>
+<li>Join the <a href="https://lists.chipsalliance.org/g/f4pga-wg">mailing lists</a> for the projects you are interested in.</li>
+<li>Join the IRC chat channel <a href="https://kiwiirc.com/nextclient/#irc://irc.libera.chat/#F4PGA">#f4pga on irc.libera.chat</a>.</li>
+</ul>
+<hr>
+<h1 id="frequently-asked-questions-faq-">Frequently Asked Questions (FAQ)</h1>
+<h2 id="can-i-work-on-project-xxx-">Can I work on project XXX?</h2>
+<p>Yes!</p>
+<h2 id="can-you-please-help-me-">Can you please help me?</h2>
+<p>Please ask more specific questions. What is it you don&#39;t understand? What have you
+read so far? Tell us about yourself.</p>
+<p>See the <a href="#how-to-ask-for-help">How to ask for help</a> section above.</p>
+<h2 id="what-should-i-work-on-">What should I work on?</h2>
+<p>What do you like doing? What interests you? You know better what projects are
+going to keep you interested for 3 months than we do.</p>
+<h3 id="is-project-xxx-important-">Is project XXX important?</h3>
+<p>For GSoC the most important factor is the application&#39;s quality! If the strongest
+application submitted is for a lower priority project, it is much more likely to be
+accepted - even if poorer applications exist for higher priority projects.</p>
+<h2 id="what-should-i-do-next-">What should I do next?</h2>
+<p>Start writing your proposal as laid out in the <a href="#step-2---writing-a-proposal">Writing
+Proposals</a> section. This will help you ask better
+questions, too!</p>
+<h2 id="whom-should-i-contact-for-project-xxxx-">Whom should I contact for project XXXX?</h2>
+<p>As developer time is limited, we ask everyone post their messages to the public
+mailing list or IRC channel (read
+<a href="http://www.catb.org/esr/faqs/smart-questions.html#noprivate">http://www.catb.org/esr/faqs/smart-questions.html#noprivate</a> for a more detailed
+explanation).</p>
+<h1 id="thanks">Thanks</h1>
+<p>We would like to thank the following:</p>
+<ul>
+<li><a href="http://wiki.creativecommons.org/Summer_of_Code">http://wiki.creativecommons.org/Summer_of_Code</a> <em>Creative Commons</em> - a lot of the information in this document was adapted from their Summer of Code page.</li>
+<li><a href="http://www.google.com/">http://www.google.com/</a> - without Google, this wouldn&#39;t even be possible.</li>
+</ul>
+
+      </body>
+
+      </html>
+    
